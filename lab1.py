@@ -8,7 +8,6 @@ def update_graph(event):
     B = float(B_textbox.text)
 
     ax.clear()
-    ax.set_title('ρ = a/ф')
 
     phi = np.arange(A+0.05, B, 0.05)
     rho = a / phi
@@ -16,9 +15,8 @@ def update_graph(event):
     ax.plot(phi, rho, lw=2)
     plt.draw()
 
-fig = plt.figure(figsize=(8, 6))
+fig = plt.figure('ρ = a/ф', figsize=(8, 6))
 ax = fig.add_subplot(111, polar=True)
-ax.set_title('ρ = a/ф')
 
 phi = np.arange(3, 10, 0.05)
 rho = 1 / phi
